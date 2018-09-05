@@ -1,0 +1,18 @@
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
+
+Notes:-
+
+Why OOJS:-
+Reusability
+Performance
+Changes are easy
+
+Features:-
+Encapsulation:- Object data is inside an Object package
+Object Package:- Its called a nameSpace(function in case of constructer function).
+Abstraction:- Creating something simple from a more complex one.
+Object Instances:- Contains detailed functionalities inside a class. When created a constructer is called and its called instantiation.
+Inheritance:-
+Prototypes: Javascript objects inherits features from one another.

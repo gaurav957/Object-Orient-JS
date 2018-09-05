@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+
+        //Long way of object creation/ Object Literal
+        function createNewPerson(name) {
+            var obj = {};
+            obj.name = name;
+            obj.greeting = function() {
+            alert('Hi! I\'m ' + this.name + '.');
+        };
+            return obj;
+        }
+
+        //calling phase
+            var salva = new createNewPerson('Salva');
+            //salva.name;
+            //salva.greeting();
+    </script>
+    <!-- <script>
+            //using constructor function
+            function Person(name) {
+            this.name = name;
+            this.greeting = function() {
+                alert('Hi! I\'m ' + this.name + '.');
+            };
+            }
+            
+            // calling phase
+            var person1 = new Person('Bob');
+            var person2 = new Person('Sarah');
+            person1.name
+            person1.greeting()
+            person2.name
+            person2.greeting()
+    </script> -->
+    <!-- <script>
+        //Some more example of constructer function
+        function Person(first, last, age, gender, interests) {
+            this.name = {
+                'first': first,
+                'last' : last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+            this.thirdPerson;
+
+                if(gender == "male"){
+                    this.thirdPerson =  "He";
+                }else{
+                    this.thirdPerson =  "She";
+                }
+
+            this.bio = function() {
+                alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. '+this.thirdPerson+' likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+            };
+            this.greeting = function() {
+                alert('Hi! I\'m ' + this.name.first + '.');
+            };
+            this.myfirstCall = function(){
+                console.log("yes "+this.name.first+" is called");
+            }
+        }
+
+        //creating an object instance
+        var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+
+         person1['age']
+         person1.interests[1]
+         person1.bio();
+         person1.myfirstCall();
+    </script> -->
+    <!-- <script>
+        //Type 3 -- using new Object Keyword
+        var person1 = new Object();
+        person1.name = 'Chris';
+        person1['age'] = 38;
+        person1.greeting = function() {
+            alert('Hi! I\'m ' + this.name + '.');
+        };
+        // Or directly pass an object literal
+        var person1 = new Object({
+        name: 'Chris',
+        age: 38,
+            greeting: function() {
+                alert('Hi! I\'m ' + this.name + '.');
+            }
+        });
+    </script> -->
+    <!-- <script>
+        //4th option is to create 1 object from another// copies everything
+        var person2 = Object.create(person1);
+        person2.name
+        person2.greeting();
+    </script> -->
+</html>
